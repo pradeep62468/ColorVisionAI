@@ -125,28 +125,29 @@ while True:
 
     # Draw bounding boxes around detected objects
     for obj in objects:
-
         x = obj["x"]
         y = obj["y"]
         w = obj["w"]
         h = obj["h"]
-        color = obj["color"]
+
+    color_name = obj["color"]
+    box_color = BOX_COLORS.get(color_name, WHITE)
 
     cv2.rectangle(
         frame,
         (x, y),
         (x + w, y + h),
-        (255, 0, 0),
+        box_color,
         2
     )
 
     cv2.putText(
         frame,
-        color,
+        color_name,
         (x, y - 10),
-        cv2.FONT_HERSHEY_SIMPLEX,
+        FONT,
         0.6,
-        (255, 0, 0),
+        box_color,
         2
     )
     cv2.imshow("Color Vision AI", frame)

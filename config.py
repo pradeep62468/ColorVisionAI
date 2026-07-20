@@ -24,3 +24,15 @@ BLUE = (255, 0, 0)
 YELLOW = (0, 255, 255)
 ORANGE = (0, 165, 255)
 PURPLE = (255, 0, 255)
+# Bounding box colors
+BOX_COLORS = {
+    "Red": RED,
+    "Green": GREEN,
+    "Blue": BLUE,
+    "Yellow": YELLOW,
+    "Orange": ORANGE,
+    "Purple": PURPLE,
+    "Black": WHITE,      # White box for visibility
+    "White": BLACK,      # Black box for visibility
+    "Unknown": GRAY
+}
